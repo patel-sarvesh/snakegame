@@ -1,0 +1,21 @@
+<div style="margin: auto; width: 30%;">
+    <h3 ng-if="showWinMessage">You won!</h3>
+    <h3 ng-if="showLostMessage">You loss!</h3>
+    <table class="minefield">
+        <tr ng-repeat="row in minefield.rows">
+            <td ng-repeat="spot in row.spots" ng-click="uncoverSpot(spot)">
+                <img ng-if="spot.isCovered" src="../style/image/covered.png">
+                <img ng-if="!spot.isCovered && spot.content == 'empty'" src="../style/image/empty.png">
+                <img ng-if="!spot.isCovered && spot.content == 'bomb'" src="../style/image/mine.png">
+                <img ng-if="!spot.isCovered && spot.content == '1'" src="../style/image/number-1.png">
+                <img ng-if="!spot.isCovered && spot.content == '2'" src="../style/image/number-2.png">
+                <img ng-if="!spot.isCovered && spot.content == '3'" src="../style/image/number-3.png">
+                <img ng-if="!spot.isCovered && spot.content == '4'" src="../style/image/number-4.png">
+                <img ng-if="!spot.isCovered && spot.content == '5'" src="../style/image/number-5.png">
+                <img ng-if="!spot.isCovered && spot.content == '6'" src="../style/image/number-6.png">
+                <img ng-if="!spot.isCovered && spot.content == '7'" src="../style/image/number-7.png">
+                <img ng-if="!spot.isCovered && spot.content == '8'" src="../style/image/number-8.png">
+            </td>
+        </tr>
+    </table>
+</div>
